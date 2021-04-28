@@ -404,6 +404,9 @@ function loadthis(that, changedProperties) {
                               'Version': versVal,
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
                               'Date': dtVal,
+		 	      'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
+                              'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
+                              'DM_SALESCOGS_SKU': rec[4].trim(),		    
                               /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
