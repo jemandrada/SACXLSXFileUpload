@@ -395,7 +395,11 @@ function loadthis(that, changedProperties) {
                             rec_count = rec_count + 1;
                             versVal = "\"public\".\"" + rec[0].trim() + "\"";
                             mth = t-11;
-                            dtVal = rec[11].trim() + mth;  
+							if(mth<=9) {  
+                            dtVal = rec[11].trim() + "0" + mth.tostring();
+							}else{
+                            dtVal = rec[11].trim() + mth.tostring();	
+							}
                             result_final.push({
                               'Version': versVal,
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
