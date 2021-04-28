@@ -392,8 +392,8 @@ function loadthis(that, changedProperties) {
                       if (len > 0) {
                           for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
-                            /*versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
-                            dtVal = concat(rec[11].trim(),"01");*/  
+                            versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
+                            dtVal = concat(rec[11].trim(),"01");  
                             result_final.push({
                               'ID': i,
                               'DATE': rec[0].trim(),
