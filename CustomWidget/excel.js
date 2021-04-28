@@ -397,7 +397,7 @@ function loadthis(that, changedProperties) {
                             mth = t-11;
                             dtVal = concat(rec[11].trim(),mth);  
                             result_final.push({
-                              'ID': i,
+                              'Version': versVal,
                               'DATE': rec[0].trim(),
                               'COUNTRY_CODE': rec[1].trim(),
                               'COMPANY_CODE': rec[2].trim(),
