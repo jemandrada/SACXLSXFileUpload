@@ -393,13 +393,13 @@ function loadthis(that, changedProperties) {
                       if (len > 0) {
                           for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
-                           /* versVal = "\"public\".\"" + rec[0].trim() + "\"";
+                           versVal = "\"public\".\"" + rec[0].trim() + "\"";
                             mth = t-11;
 							if(mth<=9) {  
                             dtVal = rec[11].trim() + "0" + mth.tostring();
 							}else{
                             dtVal = rec[11].trim() + mth.tostring();	
-							}*/
+							}
                             result_final.push({
                           'ID': i,
                           'DATE': rec[0].trim(),
