@@ -390,7 +390,7 @@ function loadthis(that, changedProperties) {
                          + rec[12].trim().length + rec[13].trim().length + rec[14].trim().length + rec[15].trim().length + rec[16].trim().length + rec[17].trim().length
                          + rec[18].trim().length + rec[19].trim().length + rec[20].trim().length + rec[21].trim().length + rec[22].trim().length + rec[23].trim().length;
                       if (len > 0) {
-                          /*for(var t=12; t<24; t++){*/
+                          for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
                             /*versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
                             dtVal = concat(rec[11].trim(),"01");*/  
@@ -419,7 +419,7 @@ function loadthis(that, changedProperties) {
                               'DM_SALESCOGS_SCENARIO': rec[9].trim(),
                               if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval }, */ 
                             });
-                          /*}*/
+                          }
 
                       }
                     }
