@@ -406,7 +406,7 @@ function loadthis(that, changedProperties) {
                               'Date': dtVal,
                               'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
                               'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
-                              'DM_SALESCOGS_SKU': rec[4].trim()  
+                              'DM_SALESCOGS_SKU': rec[4].trim(),  
                               'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
                               'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
