@@ -410,7 +410,9 @@ function loadthis(that, changedProperties) {
 			      'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
                               'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),			    
-                              /*  
+                              'DM_SALESCOGS_TYPE': rec[8].trim(), 
+                              'DM_SALESCOGS_SCENARIO': rec[9].trim(),
+			       /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
                               'Date': "2021011",
