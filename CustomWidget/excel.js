@@ -396,9 +396,9 @@ function loadthis(that, changedProperties) {
                            versVal = "\"public\".\"" + rec[0].trim() + "\"";
                             mth = t-11;
 							if(mth<=9) {  
-                            dtVal = rec[11].trim() + "0" + mth.tostring();
+                            dtVal = rec[11].trim() + "0" + mth.toString();
 							}else{
-                            dtVal = rec[11].trim() + mth.tostring();	
+                            dtVal = rec[11].trim() + mth.toString();	
 							}
                             result_final.push({
                           'ID': i,
