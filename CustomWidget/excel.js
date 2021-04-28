@@ -470,18 +470,7 @@ function loadthis(that, changedProperties) {
 	      'Unit_Price': Unit_Price,
 	      'Adjustment_Calc': Adjustment_Calc,
 	      'Gross_Sales_Calc': Gross_Sales_Calc,  
-                              'Version': "Hello",
-                              'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
-                              'Date': "2021011",
-                              'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
-                              'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
-                              'DM_SALESCOGS_SKU': rec[4].trim()  
-                              'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
-                              'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
-                              'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
-                              'DM_SALESCOGS_TYPE': rec[8].trim(), 
-                              'DM_SALESCOGS_SCENARIO': rec[9].trim(),
-                              if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval }, */ 
+                             
                             });
                           }
 
