@@ -418,6 +418,33 @@ function loadthis(that, changedProperties) {
 					 case '% Adjustment':
 						 Perc_Adjustment = rec[t].trim().replace(/[,]/g, "");
 						 break;
+					 case 'Adjustment - Calculated':
+						 Adjustment_Calc = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'Amount':
+						 Amount = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'COGS at Standard':
+						 COGS_Standard = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'GDE Units (Volume)':
+						 GDE_Units_Volume = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'ICP Cost':
+						 ICP_Cost = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'Standard Cost':
+						 Standard_Cost = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'Units (Volume)':
+						 Units_Volume = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'Unit Price':
+						 Unit_Price = rec[t].trim().replace(/[,]/g, "");
+						 break;
+					 case 'Gross Sales - Calculated':
+						 Gross_Sales_Calc = rec[t].trim().replace(/[,]/g, "");
+						 break;				 
 				 }
 					 
                             result_final.push({
@@ -432,8 +459,17 @@ function loadthis(that, changedProperties) {
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),			    
                               'DM_SALESCOGS_TYPE': rec[8].trim(), 
                               'DM_SALESCOGS_SCENARIO': rec[9].trim(),
-															'Perc_Adjustment': Perc_Adjustment,
-			       /*  
+			      'Perc_Adjustment': Perc_Adjustment,
+			      'Adjustment_Calc': Adjustment_Calc,
+	      'Amount': Amount,
+	      'COGS_Standard': COGS_Standard,
+	      'GDE_Units_Volume': GDE_Units_Volume,
+	      'ICP_Cost': ICP_Cost,
+	      'Standard_Cost': Standard_Cost,
+	      'Units_Volume': Units_Volume,
+	      'Unit_Price': Unit_Price,
+	      'Adjustment_Calc': Adjustment_Calc,
+	      'Gross_Sales_Calc': Gross_Sales_Calc,  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
                               'Date': "2021011",
