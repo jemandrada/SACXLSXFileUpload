@@ -393,9 +393,9 @@ function loadthis(that, changedProperties) {
                       if (len > 0) {
                           for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
-                            versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
+                            versVal = "\"public\".\"" + rec[0].trim() + "\"";
                             mth = t-11;
-                            dtVal = concat(rec[11].trim(),mth);  
+                            dtVal = rec[11].trim() + mth;  
                             result_final.push({
                               'Version': versVal,
                               'DATE': rec[0].trim(),
