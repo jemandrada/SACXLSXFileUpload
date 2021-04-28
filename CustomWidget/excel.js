@@ -408,7 +408,6 @@ function loadthis(that, changedProperties) {
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
                               'DM_SALESCOGS_TYPE': rec[8].trim(), 
                               'DM_SALESCOGS_SCENARIO': rec[9].trim(),  
-                              if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval },
                               /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
