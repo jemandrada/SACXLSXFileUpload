@@ -344,8 +344,8 @@ function loadthis(that, changedProperties) {
 
               var total = this_.getView().byId("total");
               var rec_count = 0;
-              var dummyval = "0";
               var len = 0;
+              
 /*Comment: Old Code for original Template with 9 fields                
               if (lengthfield === 9) {
                 for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
@@ -374,6 +374,11 @@ function loadthis(that, changedProperties) {
                   }
                 }
 */
+              
+              var dummyval ="0"  
+              var versVal = "";
+              var dtVal ="";
+                
               if (lengthfield === 24) {
                 for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
                   if (result.split("[$@~!~@$]")[i].length > 0) {
@@ -387,17 +392,19 @@ function loadthis(that, changedProperties) {
                       if (len > 0) {
                           for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
+                            /*versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
+                            dtVal = concat(rec[11].trim(),"01");*/  
                             result_final.push({
-                              'Version': Concat("\"public\".\"",rec[0].trim(),"\""),
+                              'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
-                              'Date': concat(rec[11].trim(),(t-11).tostring()),
+                              'Date': "2021011",
                               'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
                               'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
                               'DM_SALESCOGS_SKU': rec[4].trim()  
                               'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
                               'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
-                              'DM_SALESCOGS_TYPE': rec[8].trim() 
+                              'DM_SALESCOGS_TYPE': rec[8].trim(), 
                               'DM_SALESCOGS_SCENARIO': rec[9].trim(),
                               /*if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval }, */ 
                             });
