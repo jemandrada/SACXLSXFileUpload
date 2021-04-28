@@ -344,8 +344,9 @@ function loadthis(that, changedProperties) {
 
               var total = this_.getView().byId("total");
               var rec_count = 0;
-
+              var dummyval = "0";
               var len = 0;
+/*Comment: Old Code for original Template with 9 fields                
               if (lengthfield === 9) {
                 for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
                   if (result.split("[$@~!~@$]")[i].length > 0) {
@@ -372,7 +373,41 @@ function loadthis(that, changedProperties) {
                     }
                   }
                 }
+*/
+              if (lengthfield === 24) {
+                for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
+                  if (result.split("[$@~!~@$]")[i].length > 0) {
 
+                    var rec = result.split("[$@~!~@$]")[i].split("[#@~!~@#]");
+                    if (rec.length > 0) {
+                      len = rec[0].trim().length + rec[1].trim().length + rec[2].trim().length + rec[3].trim().length + rec[4].trim().length + rec[
+                        5].trim().length + rec[6].trim().length + rec[7].trim().length + rec[8].trim().length + rec[9].trim().length + rec[10].trim().length + rec[11].trim().length
+                         + rec[12].trim().length + rec[13].trim().length + rec[14].trim().length + rec[15].trim().length + rec[16].trim().length + rec[17].trim().length
+                         + rec[18].trim().length + rec[19].trim().length + rec[20].trim().length + rec[21].trim().length + rec[22].trim().length + rec[23].trim().length;
+                      if (len > 0) {
+                          for(var t=12; t<24; t++){
+                            rec_count = rec_count + 1;
+                            result_final.push({
+                              'Version': Concat("\"public\".\"",rec[0].trim(),"\""),
+                              'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
+                              'Date': concat(rec[11].trim(),(t-11).tostring()),
+                              'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
+                              'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
+                              'DM_SALESCOGS_SKU': rec[4].trim()  
+                              'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
+                              'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
+                              'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
+                              'DM_SALESCOGS_TYPE': rec[8].trim() 
+                              'DM_SALESCOGS_SCENARIO': rec[9].trim(),
+                              if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval },  
+                            });
+                          }
+
+                      }
+                    }
+                  }
+                }
+                  
                 if (result_final.length === 0) {
                   fU.setValue("");
                   MessageToast.show("There is no record to be uploaded");
