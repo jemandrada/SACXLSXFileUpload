@@ -395,6 +395,17 @@ function loadthis(that, changedProperties) {
                             /*versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
                             dtVal = concat(rec[11].trim(),"01");*/  
                             result_final.push({
+                              'ID': i,
+                              'DATE': rec[0].trim(),
+                              'COUNTRY_CODE': rec[1].trim(),
+                              'COMPANY_CODE': rec[2].trim(),
+                              'TYPE': rec[3].trim(),
+                              'VALUE_DATE': rec[4].trim(),
+                              'AMOUNT': rec[5].trim().replace(/[,]/g, ""),
+                              'CURRENCY': rec[6].trim(),
+                              'COMMENTS': rec[7].trim().replace(/["'\n\r]/g, ""),
+                              'LOCK_FLAG': rec[8].trim(),  
+                              /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
                               'Date': "2021011",
@@ -405,8 +416,8 @@ function loadthis(that, changedProperties) {
                               'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
                               'DM_SALESCOGS_TYPE': rec[8].trim(), 
-                              'DM_SALESCOGS_SCENARIO': rec[9].trim()/*,
-                              /*if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval }, */ 
+                              'DM_SALESCOGS_SCENARIO': rec[9].trim(),
+                              if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval }, */ 
                             });
                           /*}*/
 
