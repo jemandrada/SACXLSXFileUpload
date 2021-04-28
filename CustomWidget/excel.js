@@ -378,6 +378,7 @@ function loadthis(that, changedProperties) {
               var dummyval ="0"  
               var versVal = "";
               var dtVal ="";
+              var mth = 0;  
                 
               if (lengthfield === 24) {
                 for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
@@ -393,7 +394,8 @@ function loadthis(that, changedProperties) {
                           for(var t=12; t<24; t++){
                             rec_count = rec_count + 1;
                             versVal = Concat("\"public\".\"",rec[0].trim(),"\"");
-                            dtVal = concat(rec[11].trim(),"01");  
+                            mth = t-11;
+                            dtVal = concat(rec[11].trim(),mth);  
                             result_final.push({
                               'ID': i,
                               'DATE': rec[0].trim(),
