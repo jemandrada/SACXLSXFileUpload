@@ -398,15 +398,17 @@ function loadthis(that, changedProperties) {
                             dtVal = rec[11].trim() + mth;  
                             result_final.push({
                               'Version': versVal,
-                              'DATE': rec[0].trim(),
-                              'COUNTRY_CODE': rec[1].trim(),
-                              'COMPANY_CODE': rec[2].trim(),
-                              'TYPE': rec[3].trim(),
-                              'VALUE_DATE': rec[4].trim(),
-                              'AMOUNT': rec[5].trim().replace(/[,]/g, ""),
-                              'CURRENCY': rec[6].trim(),
-                              'COMMENTS': rec[7].trim().replace(/["'\n\r]/g, ""),
-                              'LOCK_FLAG': rec[8].trim(),  
+                              'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
+                              'Date': dtVal,
+                              'DM_SALESCOGS_LEGAL_ENTITY': rec[2].trim(),
+                              'DM_SALESCOGS_MANAGEMENT_ENTITY': rec[3].trim(),  
+                              'DM_SALESCOGS_SKU': rec[4].trim()  
+                              'DM_SALESCOGS_BUS_CATEGORY': rec[5].trim(),
+                              'DM_SALESCOGS_CUSTOMER_GROUP': rec[6].trim(),
+                              'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),
+                              'DM_SALESCOGS_TYPE': rec[8].trim(), 
+                              'DM_SALESCOGS_SCENARIO': rec[9].trim(),  
+                              if(rec[9].trim()==="% Adjustment"){'Perc_Adjustment': rec[t].trim().replace(/[,]/g, "") } else{'Perc_Adjustment': dummyval },
                               /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
