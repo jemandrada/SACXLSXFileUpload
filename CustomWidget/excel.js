@@ -378,7 +378,21 @@ function loadthis(that, changedProperties) {
               var dummyval ="0"  
               var versVal = "";
               var dtVal ="";
-              var mth = 0;  
+              var mth = 0;
+	      var Perc_Adjustment=0;
+	      var Adjustment_Calc = 0;
+	      var Amount = 0;
+	      var COGS_Standard = 0;
+	      var GDE_Units_Volume = 0;
+	      var ICP_Cost = 0;
+	      var Standard_Cost = 0;
+	      var Units_Volume = 0;
+	      var Unit_Price = 0;
+	      var Adjustment_Calc = 0;
+	      var Gross_Sales_Calc = 0;
+		    
+		    
+	      
                 
               if (lengthfield === 24) {
                 for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
@@ -395,11 +409,17 @@ function loadthis(that, changedProperties) {
                             rec_count = rec_count + 1;
                            versVal = "\"public\".\"" + rec[0].trim() + "\"";
                             mth = t-11;
-							if(mth<=9) {  
+			    if(mth<=9) {  
                             dtVal = rec[11].trim() + "0" + mth.toString();
-							}else{
+			    }else{
                             dtVal = rec[11].trim() + mth.toString();	
-							}
+			    }
+				 switch (rec[10].trim()){
+					 case '% Adjustment':
+						 Perc_Adjustment = rec[t].trim().replace(/[,]/g, "");
+						 break;
+				 }
+					 
                             result_final.push({
                               'Version': versVal,
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
@@ -412,6 +432,7 @@ function loadthis(that, changedProperties) {
                               'DM_SALESCOGS_DEMAND_TYPE': rec[7].trim(),			    
                               'DM_SALESCOGS_TYPE': rec[8].trim(), 
                               'DM_SALESCOGS_SCENARIO': rec[9].trim(),
+															'Perc_Adjustment': Perc_Adjustment,
 			       /*  
                               'Version': "Hello",
                               'DM_SALESCOGS_ACCOUNT': rec[1].trim(),
